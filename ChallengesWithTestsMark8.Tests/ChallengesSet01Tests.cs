@@ -140,7 +140,7 @@ namespace ChallengesWithTestsMark8.Tests
         }
 
         [Fact]
-        public void GetHey()
+        public void GetHey() 
         {
             // Arrange
             ChallengesSet01 challenger = new ChallengesSet01();
