@@ -11,13 +11,16 @@ namespace ChallengesWithTestsMark8
         {
            
             return char.IsLetter(c);
+
+            //var alpha = "abcdefghijklmnopqrstuvwxyz";
+            //return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'); can also do this way
             
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
             //throw new NotImplementedException();
-            bool countIsEven = true;
+            //bool countIsEven = true; not necessary
             if(vals.Length % 2 == 0)
             {
                 return true;
@@ -80,17 +83,20 @@ namespace ChallengesWithTestsMark8
             }
             return numbers.Sum();
 
+            //return (numbers == null) ? 0 : numbers.Sum(); can also do this way
         }
 
         public int SumEvens(int[] numbers)
         {
-            //throw new NotImplementedException();
-            if (numbers == null || numbers.Length == 0) 
+            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
             {
                 return 0;
             }
-            return numbers.Where(x => x % 2 == 0).Sum(); 
-          
+            return numbers.Where(x => x % 2 == 0).Sum();
+
+            //return numbers?.Where(x => x % 2 == 0).Sum() ?? 0; can do this way
+            //return (numbers == null) ? 0 : numbers.Where(x => x % 2 == 0).Sum(); can be done this way
 
         }
 
